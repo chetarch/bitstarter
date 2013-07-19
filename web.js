@@ -3,7 +3,7 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-    var content;
+    var content, fs;
     fs.readFile('./index.html', function read(err, data) {
         if (err) {
             throw err;
